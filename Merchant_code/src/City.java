@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class City {
-    String name;
+    private String name;
 
     public City(String name){
         ArrayList<String> Fruits = new ArrayList<String>();
