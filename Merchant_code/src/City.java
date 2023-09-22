@@ -29,7 +29,7 @@ public class City {
         Quantity.add(4);
         System.out.println(Quantity);
 
-        //this one we have to have a object name game to put them all togheter
+        //this one we have to have an object name game to put them all together
         ArrayList<String> City = new ArrayList<>();
         City.add("Montreal");
         City.add("London");
