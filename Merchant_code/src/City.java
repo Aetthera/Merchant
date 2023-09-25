@@ -2,48 +2,79 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class City {
-    private String name;
-    private String[] item_Names;
-    private Double[] item_Prices;
 
-    public String GetName()
-    {
-        return name;
+    State current ;
+
+    public State getState() {
+
+        return this.current;
     }
 
-    // COMEBACK LATER
-    public void SetItemPrice(String item_Name, Double price)
-    {
-        for (int i = 0; i < item_Name.Length; i++)
-        {
-            if (item_Names[i] == item_Name)
-            {
-                item_Prices[i] = price;
-                return;
-            }
-        }
+    public void setState(State state) {
+        this.current = state;
+    }
+    public City(){
 
-        // Handle the case where the item doesn't exist in the city
-        throw new InvalidOperationException($"Item '{item_Name}' not available in {name}");
+        this.current= Montreal.Instance();
+
     }
 
-    // COMEBACK LATER
-    public Double GetPurchasePrice(String item_Name)
-    {
-        for (int i = 0; i < item_Names.Length; i++)
-        {
-            if (item_Names[i] == item_Name)
-            {
-                return item_Prices[i];
-            }
-        }
+    public void switch_City(){
 
-        // Handle the case where the item doesn't exist in the city
-        throw new InvalidOperationException($"Item '{itemName}' not available in {name}");
+        this.current.switch_City(this);
     }
 
 
 
+
+
+
+
+
+
+
+//    private String name;
+//    private String[] item_Names;
+//    private Double[] item_Prices;
+//
+//    public String GetName()
+//    {
+//        return name;
+//    }
+//
+//    // COMEBACK LATER
+//    public void SetItemPrice(String item_Name, Double price)
+//    {
+//        for (int i = 0; i < item_Name.Length; i++)
+//        {
+//            if (item_Names[i] == item_Name)
+//            {
+//                item_Prices[i] = price;
+//                return;
+//            }
+//        }
+//
+//        // Handle the case where the item doesn't exist in the city
+//        throw new InvalidOperationException($"Item '{item_Name}' not available in {name}");
+//    }
+//
+//    // COMEBACK LATER
+//    public Double GetPurchasePrice(String item_Name)
+//    {
+//        for (int i = 0; i < item_Names.Length; i++)
+//        {
+//            if (item_Names[i] == item_Name)
+//            {
+//                return item_Prices[i];
+//            }
+//        }
+//
+//        // Handle the case where the item doesn't exist in the city
+//        throw new InvalidOperationException($"Item '{itemName}' not available in {name}");
+//    }
+
+
+//=================================================================   OLD
 
 //    public City(String name){
 //        ArrayList<String> Fruits = new ArrayList<String>();
