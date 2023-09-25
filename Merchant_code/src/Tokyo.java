@@ -1,4 +1,4 @@
-public class Tokyo  extends City{
+public class Tokyo  extends State{
     private static Tokyo instance = new Tokyo();
     private Tokyo(){}
 

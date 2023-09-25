@@ -1,4 +1,4 @@
-public class NewYork extends City{
+public class NewYork extends State{
     private static NewYork instance = new NewYork();
     private NewYork(){}
 
